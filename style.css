@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400&display=swap');
+
+* {
+	font-family: 'Poppins', sans-serif;
+	text-transform: capitalize;
+	text-decoration:none;
+	outline: none;
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	
+}
+
+*::selection {
+	background:#ff046f;
+	color:#fff;
+}
+
+html {
+	font-size: 62.5%;
+	overflow-x: hidden;
+}
+
+body {
+	background: linear-gradient(45deg,white,purple,blue,black);
+			background-size: 400% 400%;
+			position: relative;
+			animation: cambiar 10s ease-in-out infinite;
+		}
+
+		@keyframes cambiar{
+			0%{background-position: 0 50%;}
+			50%{background-position: 100% 50%;}
+			100%{background-position: 0 50%;}
+		
+}
+
+
+.heading {
+	font-size: 4rem;
+	color:#fdb433;
+	text-align:center;
+	padding: 6rem 1rem 0 0;
+	letter-spacing: .2rem;
+	font-weight: 500;
+}
+
+.title{
+	padding: 0 1rem;
+	font-size: 2rem;
+	text-align: center;
+	font-weight: 400;
+	color:#fdb433;
+}
+
+header {
+	width:100%;
+	background:#F0F0F0;
+	position:fixed;
+	display:flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 2rem;
+	z-index: 1000;
+	transition: .2s;
+}
+
+header .navbar ul {
+	display:flex;
+	align-items: center;
+	justify-content: space-between;
+	list-style:none;
+}	
+
+header .navbar ul li {
+	margin: 0 1rem;
+}
+
+header .navbar ul li a {
+	font-size: 2rem;
+	color:#333333;
+	transition: .2s;
+}
+
+header .navbar ul li .active,
+header .navbar ul li a:hover {
+	color:#FFC300;
+}
+
+
+header .Logo {
+	font-size: 2.5rem;
+	color:#C70039 ;
+	text-transform:uppercase
+}
+
+header .fa-bars {
+	font-size:3rem;
+	color:#ff046f;
+	cursor:pointer;
+	display:none;
+	transition: .2s;
+}
+
+.home {
+	min-height: 70vh;
+	background:linear-gradient(rgba(0,59,250,.8),rgba(198,59,250,.8)), url(imagenes/pngegg.png) no-repeat;
+	background-size:conver;
+	background-position: center;
+	background-attachment:fixed;
+	z-index:0;
+	overflow:hidden;
+	position:relative;
+}
+
+.home .heading{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column;
+	padding-top: 25rem;
+	text-align: center;
+}
+
+.about {
+	text-align: center;
+	margin: 100px 0;
+}
+
+.about i {
+	font-size: 1.6rem;
+	color:#fff;
+	padding:1rem 0;
+}
+
+.about .box-container {
+	display: flex;
+	justify-content: center;
+	padding-top: 4rem;
+	flex-wrap: wrap;
+}
+
+.about .box-container .box {
+	width: 28rem;
+	padding-bottom: 1rem;
+	text-align: center;
+	box-shadow:0 .3rem 5rem rgba(0,0,0,.3);
+	background: #11183a;
+	margin: 4rem 2rem;
+}
+
+.about .box-container .box img {
+	height: 8.5rem;
+	width: 8.5rem;
+	object-fit:cover;
+	border-radius:50%;
+	margin-top:-4rem;
+	border: .6rem solid #ff046f;
+	border-left: .6rem solid #c63bfa;
+	border-bottom: .6rem solid #c63bfa;
+}
+
+.about .box-container .box h3 {
+	font-size: 2rem;
+	color: #ff046f;
+	padding: 0 .5rem;
+}
+
+.about .box-container .box i {
+	font-size: 1.4rem;
+	color:#fff;
+	padding: 1.3rem .1rem;
+}
+
+.curse {
+	text-align: center;
+	margin: 100px 0;
+}
+
+.curse i {
+	font-size: 1.6rem;
+	color:#fff;
+	padding:1rem 0;
+}
+
+.classmates{
+	text-align: center;
+	margin: 100px 0;
+}
+
+.classmates a {
+	font-size: 1.6rem;
+	color:#fff;
+	padding:1rem 0;
+}
+
+
+.teacher {
+	text-align: center;
+	margin: 100px 0;
+}
+
+.teacher a {
+	font-size: 1.6rem;
+	color:#fff;
+	padding:1rem 0;
+}	
+
+.contact {
+	text-align: center;
+	margin: 100px 0;
+}
+
+.contact i {
+	font-size: 1.6rem;
+	color:#fff;
+	padding:1rem 0;
+}
+
+@media (max-width:768px) {
+	html{
+		font-size: 55%;
+	}
+	
+	header .fa-bars {
+		display:block;
+	}
+	
+	header .navbar {
+		position:fixed;
+		top:-100rem;
+		left: 0;
+		width:100%;
+		background:#161e4a;
+		border-radius: 1rem;
+		opacity: 0;
+		transition: .2s linear;
+	}
+	
+		header .navbar ul {
+		flex-flow: column;
+		padding: 2rem 0;
+
+	}
+	
+	header .navbar ul li{
+		margin: 1rem 0;
+		width: 100%;
+		text-align: center;
+		
+	}
+	
+	header .navbar ul li a {
+		font-size: 3rem;
+		display:block;
+	}
+	
+	header .nav-toggle {
+		top:5.5rem;
+		opacity: 1;
+	}
+	
+	
+	.home .heading i {
+		padding: 1.5rem 2rem;
+		
+	}
+	
+	.about {
+		padding: 0 2.5rem;
+	}
+	
+	.curse {
+		padding: 0 2.5rem;
+	}
+	
+}	
